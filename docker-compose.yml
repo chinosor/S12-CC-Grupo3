@@ -1,9 +1,7 @@
-version: '3.8'
-
 services:
   # --- CAPA 1: BASE DE DATOS (Boris) ---
   mi-base-datos:
-    image: borisestradas/todo-db:1.0
+    image: borisestradas/todo-db:1.0  # 🌟 Corregido con la "s" oficial de su Docker Hub
     environment:
       POSTGRES_DB: todolist
       POSTGRES_USER: admin
@@ -15,7 +13,7 @@ services:
 
   # --- CAPA 2: BACKEND (Tu API) ---
   mi-backend:
-    image: cesarvillaa/todo-backend:1.0  # 🌟 Tu imagen real de Docker Hub
+    image: cesarvillaa/todo-backend:1.0
     ports:
       - "5000:5000"
     environment:
